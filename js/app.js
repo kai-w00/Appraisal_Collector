@@ -81,9 +81,48 @@ function renderDetail(project) {
       <div class="info-value">${project.area}</div>
     </div>
 
-    <div class="info-row">
-      <div class="info-label">예상 세대수</div>
-      <div class="info-value">${project.households}</div>
+    <hr class="panel-divider" />
+
+    <h2>예상 감정평가액</h2>
+
+    <div class="calc-box">
+      <label>공시가격 또는 기준가격</label>
+      <input id="officialPriceInput" type="number" placeholder="예: 800000000" />
+
+      <button id="calcButton">예상 감평액 계산</button>
+
+      <div id="calcResult" class="calc-result">
+        기준가격을 입력하고 계산하세요.
+      </div>
     </div>
   `;
+
+  document.getElementById("calcButton").addEventListener("click", () => {
+    const officialPrice = document.getElementById("officialPriceInput").value;
+
+    const result = calculateAppraisal({
+      officialPrice,
+      type: project.type,
+      stage: project.stage,
+      district: project.district
+    });
+
+    document.getElementById("calcResult").innerHTML = `
+      <div class="result-row">
+        <span>낮은 추정</span>
+        <strong>${formatWon(result.low)}</strong>
+      </div>
+      <div class="result-row main">
+        <span>중간 추정</span>
+        <strong>${formatWon(result.mid)}</strong>
+      </div>
+      <div class="result-row">
+        <span>높은 추정</span>
+        <strong>${formatWon(result.high)}</strong>
+      </div>
+      <p class="calc-note">
+        ※ 실제 감정평가액이 아닌 간이 추정값입니다.
+      </p>
+    `;
+  });
 }
