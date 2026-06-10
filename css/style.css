@@ -102,3 +102,62 @@ h2 {
   color: #38bdf8;
   font-size: 12px;
 }
+
+.panel-divider {
+  border: 0;
+  border-top: 1px solid #334155;
+  margin: 20px 0;
+}
+
+.calc-box label {
+  display: block;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.calc-box input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #020617;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.calc-box button {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #0ea5e9;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.calc-result {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #020617;
+  color: #cbd5e1;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.result-row.main {
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.calc-note {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
