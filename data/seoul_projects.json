@@ -1,1 +1,32 @@
-
+[
+  {
+    "id": "project-001",
+    "name": "한남3구역",
+    "district": "용산구",
+    "type": "재개발",
+    "stage": "사업시행인가",
+    "address": "서울특별시 용산구 한남동 일대",
+    "area": "386,395㎡",
+    "households": "5,800세대 예정"
+  },
+  {
+    "id": "project-002",
+    "name": "성수전략정비구역",
+    "district": "성동구",
+    "type": "재개발",
+    "stage": "정비구역 지정",
+    "address": "서울특별시 성동구 성수동 일대",
+    "area": "약 530,000㎡",
+    "households": "미정"
+  },
+  {
+    "id": "project-003",
+    "name": "압구정3구역",
+    "district": "강남구",
+    "type": "재건축",
+    "stage": "정비계획 수립",
+    "address": "서울특별시 강남구 압구정동 일대",
+    "area": "약 360,000㎡",
+    "households": "미정"
+  }
+]
